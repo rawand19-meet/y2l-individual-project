@@ -12,10 +12,6 @@ def female():
 def male():
     return render_template("male.html")
 
-@app.route('/backgroundcolor')
-def backgroundcolor():
-    return render_template("home_page.css")
-
 
 
 if __name__ == '__main__':
