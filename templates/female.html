@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html>
+<h></h>
+
+
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
+ body{
+        background-color:#CCBBFF;
+              }
 * {box-sizing: border-box;}
 
 body {
@@ -77,11 +83,11 @@ body {
   }
 }
 </style>
-</head>
-<body>
 
+<body>
+<h2 id="home_page"></h2>
 <div class="topnav">
-  <a href="#home" class="w3-button w3-bar-item">Home</a>
+<a href="http://127.0.0.1:5000/">Home</a>
 
   
   <div class="search-container">
@@ -119,14 +125,29 @@ body {
 ::-webkit-scrollbar-thumb:hover {
   background: #b30000; 
 }
+
+#haircare {
+  border: 1px solid black;
+  padding: 100px;
+  background: url(/static/img/haircare.000.jpg);
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+}
+}
 </style>
 
 <head>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='homepage.css') }}">
-
 </head>
 <body>
-<p><font size="5">Ultimate femininity is natural and effortless</font></p>
+<div id="haircare">
+
+</div>
+
 
 
 
@@ -147,40 +168,265 @@ body {
   clear: both;
   display: table;
 }
+
+.content {
+  max-width: 1000px;
+  margin: auto;
+  background: white;
+  padding: 20px;
+}
 </style>
 </head>
 <body>
+<h1 style="text-align:center;">Natural and Organic Hair Care Products</h1>
+<p style="text-align:center;">Your hair is the most visible expression of your inner health. Natural and organic hair products are both luxurious and effective. Pure ingredients infuse vitality, boost shine, add volume, smooth and replenish. Face the world with your head held high.</p>
 
-<h2>hair</h2>
-<p></p>
+
+<div align="center">
 
 <div class="row">
   <div class="column">
-    <img src="/static/img/h1.jpg"style="width:100%">
+    <img src="/static/img/h1.jpg"style="width:40%">
+  <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="john Masters Organics">
+  <input type="hidden" name="amount" value="19.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+  </div>
+
+
+  <div class="column">
+    <img src="/static/img/h2.jpg"style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Purechimp">
+  <input type="hidden" name="amount" value="5.95">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+
   </div>
   <div class="column">
-    <img src="/static/img/h2.jpg"style="width:100%">
-  </div>
-  <div class="column">
-    <img src="/static/img/h3.jpg"" style="width:100%">
+    <img src="/static/img/h3.jpg"" style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Odylique by Essential Care">
+  <input type="hidden" name="amount" value="12.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
   </div>
 </div>
-..................
- <div class="container">
-      <div class="row">
-      <div class="col-4">
-        <p>sizes</p>
-      </div>
-      <div class="col-8">
-       
-      </div>
-    </div>
-    <div class="row">
-    <div class="col-4">
-      <p>  </p></div>
-      <div class ="col-8">
-    <img src="p1.png"style="width:30%">
+
+
+<div class="row">
+  <div class="column">
+    <img src="/static/img/h4.jpg"style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="john Masters Organics">
+  <input type="hidden" name="amount" value="7.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+
   </div>
+  <div class="column">
+    <img src="/static/img/h5.jpg"style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Rahua">
+  <input type="hidden" name="amount" value="32.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+
+  </div>
+  <div class="column">
+    <img src="/static/img/h66.jpg"" style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Madara">
+  <input type="hidden" name="amount" value="13.50">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="column">
+    <img src="/static/img/h7.jpg"style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Ogario London">
+  <input type="hidden" name="amount" value="8.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+  <div class="column">
+    <img src="/static/img/h8.jpg"style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="Essentially Nature">
+  <input type="hidden" name="amount" value="10.00">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+  <div class="column">
+    <img src="/static/img/h9.jpg"" style="width:40%">
+    <form target="paypal" action="https://www.paypal.com/cgi-bin/webscr" method="post">
+
+  <!-- Identify your business so that you can collect the payments. -->
+  <input type="hidden" name="business" value="kin@kinskards.com">
+
+  <!-- Specify a PayPal Shopping Cart ADD TO BASKET button. -->
+  <input type="hidden" name="cmd" value="_cart">
+  <input type="hidden" name="add" value="1">
+
+  <!-- Specify details about the item that buyers will purchase. -->
+  <input type="hidden" name="item_name" value="PHB Ethical Beauty">
+  <input type="hidden" name="amount" value="12.35">
+  <input type="hidden" name="currency_code" value="USD">
+
+  <!-- Display the payment button. -->
+  <input type="image" name="submit"
+    src="https://www.paypalobjects.com/en_US/i/btn/btn_cart_LG.gif"
+    alt="ADD TO BASKET">
+  <img alt="" width="1" height="1"
+    src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif">
+</form>
+
+  </div>
+</div>
+</div>
+
+
 
 
 

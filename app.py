@@ -4,6 +4,7 @@ app = Flask(__name__)
 @app.route('/')
 def home_page():
     return render_template("home_page.html")
+    
 @app.route('/female')
 def female():
     return render_template("female.html")
@@ -11,6 +12,8 @@ def female():
 @app.route('/male')
 def male():
     return render_template("male.html")
+
+
 
 
 
