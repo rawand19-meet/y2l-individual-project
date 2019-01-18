@@ -19,6 +19,13 @@ def male():
     return render_template("male.html")
 
 
+@app.route('/male2')
+def male2():
+    return render_template("male2.html")
+
+
+
+
 
 
 
