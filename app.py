@@ -1,4 +1,6 @@
 from flask import Flask, render_template
+
+
 app = Flask(__name__)
 
 @app.route('/')
@@ -23,9 +25,28 @@ def male():
 def male2():
     return render_template("male2.html")
 
+@app.route('/')
+def index():
+  if current_user.is_authenticated:
+    return redirect(url_for('profile'))
+  return render_template('index.html')
 
+@app.route('/profile', methods=['GET', 'POST'])
+def profile():
+  # some code to display user profile page
+  pass
 
+@app.route('/search', methods=['POST'])
+def search():
+  form = SearchForm()
+  if not form.validate_on_submit():
+    return redirect(url_for('index'))
+  return redirect((url_for('search_results', query=form.search.data)))
 
+@app.route('/search_results/<query>')
+def search_results(query):
+  results = User.query.whoosh_search(query).all()
+  return render_template('female.html', query=query, results=results)
 
 
 
@@ -43,7 +64,7 @@ if __name__ == '__main__':
 #     return render_template("home_page.html")
     
 
-   	
+    
 
 
 
