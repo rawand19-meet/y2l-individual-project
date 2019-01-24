@@ -1,5 +1,5 @@
-from flask import Flask, render_template
-
+from flask import Flask, render_template, request, redirect, url_for
+from database import *
 
 app = Flask(__name__)
 
@@ -25,25 +25,27 @@ def male():
 def male2():
     return render_template("male2.html")
 
-@app.route('/')
-def index():
-  if current_user.is_authenticated:
-    return redirect(url_for('profile'))
-  return render_template('index.html')
+# @app.route('/')
+# def index():
+#   if current_user.is_authenticated:
+#     return redirect(url_for('profile'))
+#   return render_template('index.html')
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
-  # some code to display user profile page
+ 
   pass
 
 @app.route('/search', methods=['POST'])
 def search():
-  form = SearchForm()
-  if not form.validate_on_submit():
-    return redirect(url_for('index'))
-  return redirect((url_for('search_results', query=form.search.data)))
+    keyword = request.form["keyword"]
 
-@app.route('/search_results/<query>')
+    values = search_db(keyword)
+
+    
+
+
+@app.route('/search')
 def search_results(query):
   results = User.query.whoosh_search(query).all()
   return render_template('female.html', query=query, results=results)

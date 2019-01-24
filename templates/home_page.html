@@ -2,7 +2,6 @@
 <html>
     <form action='/database' method = "post">
 <head>
-
 	<meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -12,7 +11,7 @@
       body{
       	background-color:#CCBBFF;
       	      }
-      #myCarousel{
+      #slideshow{
       	position:relative;
       	text-align: center;
       	color:white;
@@ -48,6 +47,7 @@
 
       }
 
+
 </style>
 
 
@@ -68,24 +68,90 @@
   clear: both;
   display: table;
 }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.navbar {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;  
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color:#CCBBFF;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
 </style>
+
 </head>
 
 
 
 <body>
+	<div class="navbar">
+  <a href="#home">Home</a>
 
 	<div >
+		
   <h2></h2>  
-  <div id="myCarousel" class="carousel slide" data-ride="carousel">
+  <div id="slideshow" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
     <ol class="carousel-indicators">
-      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-      <li data-target="#myCarousel" data-slide-to="1"></li>
-      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#slideshow" data-slide-to="0" class="active"></li>
+      <li data-target="#slideshow" data-slide-to="1"></li>
+      <li data-target="#slideshow" data-slide-to="2"></li>
     </ol>
 
-    <!-- Wrapper for slides -->
     <div class="carousel-inner">
       <div class="item active">
         <img class="img-responsive" src="{{url_for('static',filename='img/y1.jpg')}}">
@@ -105,12 +171,12 @@
       </div>
     </div>
 
-    <!-- Left and right controls -->
-    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+
+    <a class="left carousel-control" href="#slideshow" data-slide="prev">
       <imge class="glyphicon glyphicon-chevron-left"></imge>
       <imge class="sr-only">Previous</imge>
     </a>
-    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+    <a class="right carousel-control" href="#slideshow" data-slide="next">
       <imge class="glyphicon glyphicon-chevron-right"></imge>
       <imge class="sr-only">Next</imge>
     </a>
@@ -119,10 +185,10 @@
 
 <div class="row">
   <div class="column">
-    <a href="{{url_for('male')}}""><img src="/static/img/maaaale.jpg" style="width:100%"><button type="button" id ="female"class="btn btn-primary"></button></a>
+    <a href="{{url_for('male')}}""><img src="/static/img/maaaale.jpg" style="width:100%"><button type="button" id ="female"class="btn btn-primary"></button>Male</a>
   </div>
   <div class="column">
-   <a href="{{url_for('female')}}""><img src="/static/img/femaaale.jpg" style="width:100%"><button type="button" id ="female"class="btn btn-primary"></button></a>
+   <a href="{{url_for('female')}}""><img src="/static/img/femaaale.jpg" style="width:100%"><button type="button" id ="female"class="btn btn-primary"></button>Female</a>
 
   </div>
  
