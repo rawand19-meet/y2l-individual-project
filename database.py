@@ -48,6 +48,27 @@ def search_db(keyword):
 # add_products("Laidbare","s9.jpg ","woman" )
 
 
+add_products("john Masters Organics",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+add_products("",".jpg ","man" )
+
+
    
 def query_all():
 	products=session.query(Products).all()
