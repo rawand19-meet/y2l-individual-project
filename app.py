@@ -25,30 +25,35 @@ def male():
 def male2():
     return render_template("male2.html")
 
-# @app.route('/')
-# def index():
-#   if current_user.is_authenticated:
-#     return redirect(url_for('profile'))
-#   return render_template('index.html')
 
 @app.route('/profile', methods=['GET', 'POST'])
 def profile():
  
   pass
 
-@app.route('/search', methods=['POST'])
-def search():
+# @app.route('/search', methods=['POST'])
+# def search():
+#     keyword = request.form["keyword"]
+
+#     values = search_db(keyword)
+
+#     item = values.first()
+
+#     return render_template("item.html", item=item)
+
+
+
+@app.route('/search', methods=["GET", "POST"])
+def search_results():
+  if request.method == "POST":
     keyword = request.form["keyword"]
+    results = search_db(keyword) 
+    item = results.first() if results else None
+    return render_template("item.html", item=item)
+  else:
+    return render_template('female.html', query=query, results=results)
 
-    values = search_db(keyword)
 
-    
-
-
-@app.route('/search')
-def search_results(query):
-  results = User.query.whoosh_search(query).all()
-  return render_template('female.html', query=query, results=results)
 
 
 

@@ -2,7 +2,7 @@ from model import *
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-engine = create_engine('sqlite:///looks.db')
+engine = create_engine('sqlite:///looks.db?check_same_thread=False')
 Base.metadata.create_all(engine)
 DBSession = sessionmaker(bind=engine)
 session = DBSession()
@@ -17,7 +17,7 @@ def add_products(name, picture, category):
 
 
 def search_db(keyword):
-	single_search = session.query(Products).filter(Products.picture==keyword or Products.category==keyword)
+	single_search = session.query(Products).filter(Products.picture==keyword or Products.category==keyword or Products.name==keyword)
 	if single_search.first():
 		return single_search
 	else:
@@ -48,25 +48,25 @@ def search_db(keyword):
 # add_products("Laidbare","s9.jpg ","woman" )
 
 
-add_products("john Masters Organics",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
+# add_products("Rahua","m1.jpg ","man" )
+# add_products("Rahua","m2.jpg ","man" )
+# add_products("Madara","m3.jpg ","man" )
+# add_products("GK Natural Creations","m4.jpg ","man" )
+# add_products("Kae","m5.jpg ","man" )
+# add_products("Lyonsleaf","m6.jpg ","man" )
+# add_products("Ogario London","m7.jpg ","man" )
+# add_products("TABITHA JAMES KRAAN","m8.jpg ","man" )
+# add_products("Pure potions","m9.jpg ","man" )
 
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
-add_products("",".jpg ","man" )
+# add_products("Trilogy","t1.jpg ","man" )
+# add_products("Balm Balm","t2.jpg ","man" )
+# add_products("Antipodes","t3.jpg ","man" )
+# add_products("REN","t4.jpg ","man" )
+# add_products("Sukin","t5.jpg ","man" )
+# add_products("Planted","t6.jpg ","man" )
+# add_products("Laidbare","t7.jpg ","man" )
+# add_products("PHB Ethical Beauty ","t8.jpg ","man" )
+# add_products("1001 remedies","t9.jpg ","man" )
 
 
    

@@ -15,9 +15,3 @@ class Products(Base):
   picture = Column(String)
   category =Column(String)
 
-# whoosh_index(app, User)
-# Base = declarative_base()
-
-# # Write your classes here :
-# class Product(Base):
-#     pass

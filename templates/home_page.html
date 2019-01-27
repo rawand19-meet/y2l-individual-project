@@ -8,146 +8,147 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <style>
-      body{
-             background-color:#CCBBFF;
-      	      }
-      #slideshow{
-      	position:relative;
-      	text-align: center;
-      	color:#CCBBFF;
-      	font-size: 80px;
-        font-family:"sans-serif";
-        width:100%;
-      }
+body{
+   background-color:#CCBBFF;
+    }
+#slideshow{
+position:relative;
+text-align: center;
+color:#CCBBFF;
+font-size: 80px;
+font-family:"sans-serif";
+width:100%;
 
- 
-      .centered{
-      	position:absolute;
-      	top:50%;
-      	left:50%;
-      	transform:translate(-50%,-50%);
-      }
-      img{
-      	display:block;
-      	margin-left:auto;
-      	margin-right:auto;	
-      	height:170%;
-      	max-height:170px;
-      	width:50%;
-      	max-width:500px;
-      }
-      #female{
-      	display: block;
-      	margin-left: auto;
-      	margin-right: auto; 
-      }
-       #male{
-      	display: block;
-      	margin-left: auto;
-      	margin-right: auto;
-      	text-align: center; 
-
-      }
-
-        #slideshow2{
-        position:relative;
-        text-align:center;
-      	color:#CCBBFF;
-        height:1000%;
-        max-height:1000px;
-        width:100%;
-        max-width: 1000px;
-        margin: auto;
+}
 
 
 
+.centered{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+}
+img{
+display:block;
+margin-left:auto;
+margin-right:auto;	
+height:100%;
+max-height:500px;
+width:100%;
+max-width:500px;
+}
+#female{
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center;  
+}
+#male{
+display: block;
+margin-left: auto;
+margin-right: auto;
+text-align: center; 
 
-   
-</style>
+}
 
 
-<style>
 * {
-  box-sizing: border-box;
+box-sizing: border-box;
 }
 
 .column {
-  float: left;
-  width: 33.33%;
-  padding: 5px;
+float: left;
+width: 33.33%;
+padding: 5px;
 }
 
 
 .row::after {
-  content: "";
-  clear: both;
-  display: table;
+content: "";
+clear: both;
+display: table;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
-  overflow: hidden;
-  background-color:#CCBBFF;
+overflow: hidden;
+background-color:#CCBBFF;
 }
 
 .navbar a {
-  float: left;
-  font-size: 16px;
-  color: #CCBBFF;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
+float: left;
+font-size: 16px;
+color: #CCBBFF;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
 }
 
 .dropdown {
-  float: left;
-  overflow: hidden;
+float: left;
+overflow: hidden;
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
-  border: none;
-  outline: none;
-  color: #CCBBFF;
-  padding: 14px 16px;
-  background-color: inherit;
-  font-family: inherit;
-  margin: 0;
+font-size: 16px;  
+border: none;
+outline: none;
+color: #CCBBFF;
+padding: 14px 16px;
+background-color: inherit;
+font-family: inherit;
+margin: 0;
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color:#CCBBFF;
+background-color:#CCBBFF;
 }
 
 p.oblique {
-  font-style: oblique;
+font-style: oblique;
 
 }
+
+
+#slideshow2{
+position:relative;
+text-align:center;
+color:#CCBBFF;
+height:500%;
+width:100%;
+max-width: 1000px;
+margin: auto;
+padding:10px;
+}
+
+/*#new-size{
+display:block;
+margin-left:auto;
+margin-right:auto;  
+height:50%;
+width:120%;
+max-width:1280px;
+max-height:550px;
+}*/
 </style>
 
 </head>
-
-
-
 <body>
 
 
   <p><strong>Contact information: </strong><a href="mailto:someone@example.com">rawandmukarker.4@gmail.com</a>.</p>
-</footer>
-
-
-		
+</footer>		
   <h1 align="center" style="font-family:monospace;">Natural Products</h1>
 <p  align="center"class="oblique">The World's Natural Beauty Shop.</p>
-
-
+<body>
 
 
   <div id="slideshow2" class="carousel slide" data-ride="carousel">
 
-    <ol class="carousel-indicators">
+    <ol class="carousel-indicators2">
       <li data-target="#slideshow2" data-slide-to="0" class="active"></li>
       <li data-target="#slideshow2" data-slide-to="1"></li>
       <li data-target="#slideshow2" data-slide-to="2"></li>
@@ -155,29 +156,30 @@ p.oblique {
 
     <div class="carousel-inner">
       <div class="item active">
-        <img class="img-responsive" src="{{url_for('static',filename='img/y1.jpg')}}">
+        <img class="img-responsive" src="{{url_for('static',filename='img/jj1.jpg')}}">
     
       </div>
 
       <div class="item">
-       <img class="img-responsive" src="{{url_for('static',filename='img/s2.jpg')}}">
+       <img class="img-responsive" src="{{url_for('static',filename='img/jj3.jpg')}}">
      
       </div>
     
       <div class="item">
-        <img class="img-responsive" src="{{url_for('static',filename='img/s3.jpg')}}">
+        <img class="img-responsive" src="{{url_for('static',filename='img/jj33.jpg')}}">
          
     </div>
-
+<div>
 
     <a class="left carousel-control" href="#slideshow2" data-slide="prev">
-      <imge class="glyphicon glyphicon-chevron-left"></imge>
-      <imge class="sr-only">Previous</imge>
+      <img class="glyphicon glyphicon-chevron-left"></img>
+      <img class="sr-only"></img>
     </a>
     <a class="right carousel-control" href="#slideshow2" data-slide="next">
-      <imge class="glyphicon glyphicon-chevron-right"></imge>
-      <imge class="sr-only">Next</imge>
+      <img class="glyphicon glyphicon-chevron-right"></img>
+      <img class="sr-only"></img>
     </a>
+  </div>
   </div>
 </div>
 
@@ -185,7 +187,8 @@ p.oblique {
 
 
 
-  <div id="slideshow" class="carousel slide" data-ride="carousel">
+
+  <div id="slideshow" class="carousel slide" data-ride="carousel" style ="height:50px">
 
     <ol class="carousel-indicators">
       <li data-target="#slideshow" data-slide-to="0" class="active"></li>
@@ -195,17 +198,17 @@ p.oblique {
 
     <div class="carousel-inner">
       <div class="item active">
-        <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpg')}}">
+        <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpeg')}}">
     
       </div>
 
       <div class="item">
-       <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpg')}}">
+       <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpeg')}}">
      
       </div>
     
       <div class="item">
-        <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpg')}}">
+        <img class="img-responsive" src="{{url_for('static',filename='img/ww.jpeg')}}">
          
     </div>
 
@@ -219,8 +222,7 @@ p.oblique {
       <imge class="sr-only">Next</imge>
     </a>
   </div>
-</div>
-
+</div><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><
 <div class="row">
   <div class="column">
     <a href="{{url_for('male')}}""><img src="/static/img/maaaale.jpg" style="width:30%"><button type="button" id ="female"class="btn btn-primary"></button><h1 align="center">Male</h1></a>
@@ -232,7 +234,6 @@ p.oblique {
   </div>
  
 </div>
-
 
    
 
