@@ -1,4 +1,4 @@
-from sqlalchemy import Column, Integer, String, Boolean
+from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import relationship, sessionmaker
 from sqlalchemy import create_engine
@@ -7,23 +7,6 @@ from sqlalchemy import create_engine
 
 
 Base=declarative_base()
-class Products(Base):
-
-  __tablename__ = 'Product'
-  id = Column(Integer, primary_key=True)
-  name = Column(String)
-  picture = Column(String)
-  category =Column(String)
-,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
-
-from sqlalchemy import Column, Integer, String, Boolean, ForeignKey
-from sqlalchemy.ext.declarative import declarative_base
-from sqlalchemy.orm import relationship, sessionmaker 
-from sqlalchemy import create_engine
-
-Base = declarative_base()
-
-
 
 
 class User(Base):
@@ -38,4 +21,12 @@ class User(Base):
 
   def __repr__(self):
     return ("user name:{}, user password:{}".format(self.name, self.password))
-    ,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,
+
+
+class Products(Base):
+
+  __tablename__ = 'Product'
+  id = Column(Integer, primary_key=True)
+  name = Column(String)
+  picture = Column(String)
+  category =Column(String)
